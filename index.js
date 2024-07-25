@@ -39,9 +39,10 @@ const fetchData = async (retryCount = 0) => {
   } catch (error) {
     if (error.response && error.response.status === 429) {
       const retryAfter = parseInt(error.response.headers['retry-after'] || '1', 10);
-      console.warn(`Rate limit exceeded. Retrying after ${retryAfter} seconds...`);
+      const delay = Math.min(retryAfter * 1000, Math.pow(2, retryCount) * 1000);
+      console.warn(`Rate limit exceeded. Retrying after ${delay / 1000} seconds...`);
       if (retryCount < 5) {
-        setTimeout(() => fetchData(retryCount + 1), retryAfter * 1000);
+        setTimeout(() => fetchData(retryCount + 1), delay);
       } else {
         console.error('Max retries reached. Please try again later.');
       }
