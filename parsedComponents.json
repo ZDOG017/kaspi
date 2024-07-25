@@ -1,0 +1,68 @@
+{
+  "components": [
+    {
+      "title": "AMD Ryzen 5 3600 OEM",
+      "price": "37820",
+      "url": "https://kaspi.kz/shop/p/amd-ryzen-5-3600-oem-6400344/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hbf/h89/63840261079070.jpg?format=preview-large",
+      "rating": 4.9,
+      "reviewCount": 99
+    },
+    {
+      "title": "GIGABYTE GeForce GTX 1660 Super OC GV-N166SOC-6GD 6Gb",
+      "price": "105999",
+      "url": "https://kaspi.kz/shop/p/gigabyte-geforce-gtx-1660-super-oc-gv-n166soc-6gd-6gb-100007697/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h09/he3/63838865621022.jpg?format=preview-large",
+      "rating": 4.8,
+      "reviewCount": 45
+    },
+    {
+      "title": "ASUS PRIME B450M-K II",
+      "price": "41263",
+      "url": "https://kaspi.kz/shop/p/asus-prime-b450m-k-ii-101069325/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hc0/h89/64022767075358.jpg?format=preview-large",
+      "rating": 5,
+      "reviewCount": 1
+    },
+    {
+      "title": "Corsair Vengeance LPX CMK16GX4M2D3600C18 2x8GB",
+      "price": "24393",
+      "url": "https://kaspi.kz/shop/p/corsair-vengeance-lpx-cmk16gx4m2d3600c18-2x8gb-102510024/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h95/h8e/64356750884894.jpg?format=preview-large",
+      "rating": 5,
+      "reviewCount": 2
+    },
+    {
+      "title": "EVGA 700 W1 100-W1-0700-K2 700W",
+      "price": "60000",
+      "url": "https://kaspi.kz/shop/p/evga-700-w1-100-w1-0700-k2-700w-100360580/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h7d/h33/63895364337694.jpg?format=preview-large",
+      "rating": 5,
+      "reviewCount": 1
+    },
+    {
+      "title": "Cooler Master Hyper 212 RR-2V2L-18PD-R1",
+      "price": "10431",
+      "url": "https://kaspi.kz/shop/p/cooler-master-hyper-212-rr-2v2l-18pd-r1-107238165/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h36/hd3/64657543561246.jpg?format=preview-large",
+      "rating": 5,
+      "reviewCount": 1
+    },
+    {
+      "title": "W.P.E NF-4000",
+      "price": "3677",
+      "url": "https://kaspi.kz/shop/p/w-p-e-nf-4000-104718879/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/he9/h8a/82778789216286.png?format=preview-large",
+      "rating": 4.9,
+      "reviewCount": 54
+    },
+    {
+      "title": "NZXT CA-H510i-BR черный",
+      "price": "100000",
+      "url": "https://kaspi.kz/shop/p/nzxt-ca-h510i-br-chernyi-105319210/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hac/hfc/65096281653278.jpg?format=preview-large",
+      "rating": 5,
+      "reviewCount": 1
+    }
+  ]
+}
