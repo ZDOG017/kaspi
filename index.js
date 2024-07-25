@@ -14,6 +14,9 @@ const headers = {
 
 axios.get(url, { headers })
   .then(response => {
+    // Log the entire response to see what we are getting
+    console.log('Response data:', response.data);
+
     // Check the structure of the response
     if (response.data && response.data.data && response.data.data.cards) {
       const data = response.data.data.cards; // Extract the array of products
@@ -25,6 +28,12 @@ axios.get(url, { headers })
         console.log(`Rating: ${product.rating}`);
         console.log(`Reviews: ${product.reviewsQuantity}`);
         console.log(`Link: ${product.shopLink}`);
+        console.log('Images:');
+        product.previewImages.forEach(image => {
+          console.log(`- Small: ${image.small}`);
+          console.log(`- Medium: ${image.medium}`);
+          console.log(`- Large: ${image.large}`);
+        });
         console.log('-----------------------');
       });
     } else {
