@@ -6,6 +6,7 @@ const puppeteer = require('puppeteer');
   // Launch a new browser instance
   const browser = await puppeteer.launch({
     headless: true, // Set to false if you want to see the browser window
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
   // Open a new page
