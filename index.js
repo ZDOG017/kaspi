@@ -1,55 +1,65 @@
-const axios = require('axios');
+const puppeteer = require('puppeteer');
 
-const url = 'https://kaspi.kz/yml/product-view/pl/filters?text=NVIDIA+GTX+1660+SUPER&hint_chips_click=false&page=0&all=false&fl=true&ui=d&q=%3AavailableInZones%3AMagnum_ZONE1&i=-1&c=750000000';
-const headers = {
-  'Accept': 'application/json, text/*',
-  'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0',
-  'Accept-Language': 'en-US,en;q=0.5',
-  'X-KS-City': '750000000',
-  'Referer': 'https://kaspi.kz/shop/search/?text=NVIDIA%20GTX%201660%20SUPER&hint_chips_click=false',
-  'Cookie': 'ks.tg=71; k_stat=aa96833e-dac6-4558-a423-eacb2f0e53e4; kaspi.storefront.cookie.city=750000000; current-action-name=Index',
-  'Connection': 'keep-alive',
-  'Accept-Encoding': 'gzip, compress, deflate, br'
-};
+(async () => {
+  const url = 'https://kaspi.kz/shop/search/?text=NVIDIA%20GTX%201660%20SUPER&hint_chips_click=false';
 
-const fetchData = async (retryCount = 0) => {
-  try {
-    const response = await axios.get(url, { headers, maxRedirects: 5 });
-    if (response.data && response.data.data && response.data.data.cards) {
-      const data = response.data.data.cards; // Extract the array of products
-      data.forEach(product => {
-        console.log(`Product ID: ${product.id}`);
-        console.log(`Title: ${product.title}`);
-        console.log(`Brand: ${product.brand}`);
-        console.log(`Price: ${product.priceFormatted}`);
-        console.log(`Rating: ${product.rating}`);
-        console.log(`Reviews: ${product.reviewsQuantity}`);
-        console.log(`Link: ${product.shopLink}`);
-        console.log('Images:');
-        product.previewImages.forEach(image => {
-          console.log(`- Small: ${image.small}`);
-          console.log(`- Medium: ${image.medium}`);
-          console.log(`- Large: ${image.large}`);
-        });
-        console.log('-----------------------');
+  // Launch a new browser instance
+  const browser = await puppeteer.launch({
+    headless: true, // Set to false if you want to see the browser window
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
+
+  // Open a new page
+  const page = await browser.newPage();
+
+  // Set user agent to mimic a real browser
+  await page.setUserAgent('Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0');
+
+  // Go to the URL
+  await page.goto(url, {
+    waitUntil: 'networkidle2', // Wait until the network is idle
+  });
+
+  // Extract product data
+  const products = await page.evaluate(() => {
+    const productElements = document.querySelectorAll('.item-card');
+    const productData = [];
+
+    productElements.forEach(product => {
+      const id = product.getAttribute('data-id');
+      const title = product.querySelector('.item-card__name').innerText;
+      const brand = product.querySelector('.item-card__brand').innerText;
+      const price = product.querySelector('.item-card__price').innerText;
+      const rating = product.querySelector('.item-card__rating-stars').getAttribute('data-rating');
+      const reviewsQuantity = product.querySelector('.item-card__reviews').innerText;
+      const shopLink = product.querySelector('a').href;
+
+      productData.push({
+        id,
+        title,
+        brand,
+        price,
+        rating,
+        reviewsQuantity,
+        shopLink,
       });
-    } else {
-      console.error('Unexpected response structure:', response.data);
-    }
-  } catch (error) {
-    if (error.response && error.response.status === 429) {
-      const retryAfter = parseInt(error.response.headers['retry-after'] || '1', 10);
-      const delay = Math.min(retryAfter * 1000, Math.pow(2, retryCount) * 1000);
-      console.warn(`Rate limit exceeded. Retrying after ${delay / 1000} seconds...`);
-      if (retryCount < 5) {
-        setTimeout(() => fetchData(retryCount + 1), delay);
-      } else {
-        console.error('Max retries reached. Please try again later.');
-      }
-    } else {
-      console.error('Error fetching data:', error.message);
-    }
-  }
-};
+    });
 
-fetchData();
+    return productData;
+  });
+
+  // Log the extracted product data
+  products.forEach(product => {
+    console.log(`Product ID: ${product.id}`);
+    console.log(`Title: ${product.title}`);
+    console.log(`Brand: ${product.brand}`);
+    console.log(`Price: ${product.price}`);
+    console.log(`Rating: ${product.rating}`);
+    console.log(`Reviews: ${product.reviewsQuantity}`);
+    console.log(`Link: ${product.shopLink}`);
+    console.log('-----------------------');
+  });
+
+  // Close the browser
+  await browser.close();
+})();
