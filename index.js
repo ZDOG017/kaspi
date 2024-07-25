@@ -1,4 +1,7 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+
+puppeteer.use(StealthPlugin());
 
 (async () => {
   const url = 'https://kaspi.kz/shop/search/?text=NVIDIA%20GTX%201660%20SUPER&hint_chips_click=false';
@@ -6,7 +9,7 @@ const puppeteer = require('puppeteer');
   // Launch a new browser instance
   const browser = await puppeteer.launch({
     headless: true, // Set to false if you want to see the browser window
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: ['--no-sandbox', '--disable-setuid-sandbox'] // Necessary for Heroku
   });
 
   // Open a new page
@@ -16,12 +19,25 @@ const puppeteer = require('puppeteer');
   await page.setUserAgent('Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0');
 
   // Go to the URL
-  await page.goto(url, {
-    waitUntil: 'networkidle2', // Wait until the network is idle
-  });
+  try {
+    await page.goto(url, {
+      waitUntil: 'networkidle2', // Wait until the network is idle
+      timeout: 60000 // Increase timeout to 60 seconds
+    });
+  } catch (error) {
+    console.error('Error navigating to the URL:', error);
+    await browser.close();
+    return;
+  }
 
   // Wait for the product cards to be visible
-  await page.waitForSelector('.item-card', { timeout: 30000 });
+  try {
+    await page.waitForSelector('.item-card', { timeout: 30000 });
+  } catch (error) {
+    console.error('Error waiting for product cards:', error);
+    await browser.close();
+    return;
+  }
 
   // Extract product data
   const products = await page.evaluate(() => {
