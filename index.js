@@ -2,16 +2,59 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const util = require('util');
 const sleep = util.promisify(setTimeout);
+const stringSimilarity = require('string-similarity');
 
 const componentNames = [
-  "AMD Ryzen 5 3600",
-  "Gigabyte GeForce GTX 1660 SUPER OC",
-  "Asus PRIME B450M-K",
-  "Corsair Vengeance LPX 16GB",
-  "EVGA 600 W1",
-  "Cooler Master Hyper 212",
-  "Noctua NF-P12",
-  "NZXT H510"
+  "NVIDIA GeForce RTX 4090",
+  "NVIDIA GeForce RTX 4080",
+  "NVIDIA GeForce RTX 4070 Ti",
+  "NVIDIA GeForce RTX 4070",
+  "NVIDIA GeForce RTX 4060 Ti",
+  "NVIDIA GeForce RTX 4060",
+  "NVIDIA GeForce RTX 3090 Ti",
+  "NVIDIA GeForce RTX 3090",
+  "NVIDIA GeForce RTX 3080 Ti",
+  "NVIDIA GeForce RTX 3080",
+  "NVIDIA GeForce RTX 3070 Ti",
+  "NVIDIA GeForce RTX 3070",
+  "NVIDIA GeForce RTX 3060 Ti",
+  "NVIDIA GeForce RTX 3060",
+  "NVIDIA GeForce RTX 3050",
+  "AMD Radeon RX 7900 XTX",
+  "AMD Radeon RX 7900 XT",
+  "AMD Radeon RX 7800 XT",
+  "AMD Radeon RX 7700 XT",
+  "AMD Radeon RX 7600",
+  "AMD Radeon RX 6950 XT",
+  "AMD Radeon RX 6900 XT",
+  "AMD Radeon RX 6800 XT",
+  "AMD Radeon RX 6800",
+  "AMD Radeon RX 6700 XT",
+  "AMD Radeon RX 6600 XT",
+  "AMD Radeon RX 6600",
+  "AMD Radeon RX 6500 XT",
+  "NVIDIA GeForce GTX 1660 Ti",
+  "NVIDIA GeForce GTX 1660 Super",
+  "NVIDIA GeForce GTX 1660",
+  "NVIDIA GeForce GTX 1650 Super",
+  "NVIDIA GeForce GTX 1650",
+  "NVIDIA GeForce GTX 1050 Ti",
+  "NVIDIA GeForce GTX 1050",
+  "AMD Radeon RX 580",
+  "AMD Radeon RX 570",
+  "AMD Radeon RX 560",
+  "AMD Radeon RX 550",
+  "NVIDIA GeForce GTX 1080 Ti",
+  "NVIDIA GeForce GTX 1080",
+  "NVIDIA GeForce GTX 1070 Ti",
+  "NVIDIA GeForce GTX 1070",
+  "NVIDIA GeForce GTX 1060 6GB",
+  "NVIDIA GeForce GTX 1060 3GB",
+  "NVIDIA GeForce GTX 1050 3GB",
+  "AMD Radeon RX 480",
+  "AMD Radeon RX 470",
+  "AMD Radeon RX 460",
+  "NVIDIA Quadro RTX 4000"
 ];
 
 const userAgents = [
@@ -19,6 +62,32 @@ const userAgents = [
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15'
 ];
+
+// Function to load existing JSON data
+function loadExistingData(filePath) {
+  if (fs.existsSync(filePath)) {
+    const rawData = fs.readFileSync(filePath);
+    return JSON.parse(rawData);
+  }
+  return { components: [] };
+}
+
+// Function to save new JSON data
+function saveData(filePath, data) {
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+}
+
+// Function to check if a component already exists
+function componentExists(existingComponents, newComponent) {
+  return existingComponents.some(component => component.title === newComponent.title);
+}
+
+// Function to find the best match for a component name
+function findBestMatch(componentName, products) {
+  const productNames = products.map(product => product.title);
+  const bestMatch = stringSimilarity.findBestMatch(componentName, productNames).bestMatch;
+  return products[productNames.indexOf(bestMatch.target)];
+}
 
 (async () => {
   console.log('Launching browser...');
@@ -28,6 +97,8 @@ const userAgents = [
   });
 
   const parsedComponents = [];
+  const existingData = loadExistingData('parsedComponents.json');
+  const existingComponents = existingData.components;
 
   for (const componentName of componentNames) {
     console.log(`Processing component: ${componentName}`);
@@ -54,25 +125,19 @@ const userAgents = [
         productElements.forEach(product => {
           const titleElement = product.querySelector('.item-card__name a');
           const priceElement = product.querySelector('.item-card__prices .item-card__prices-price');
-          const ratingElement = product.querySelector('.item-card__rating .rating');
-          const reviewsElement = product.querySelector('.item-card__rating a');
           const shopLinkElement = product.querySelector('.item-card__image-wrapper');
           const imageElement = product.querySelector('.item-card__image');
 
           const title = titleElement ? titleElement.innerText : 'N/A';
           const price = priceElement ? priceElement.innerText.replace(/\D/g, '') : 'N/A';
-          const rating = ratingElement ? parseFloat(ratingElement.className.match(/_(\d+)/)[1]) / 10 : 'N/A';
-          const reviewCount = reviewsElement ? parseInt(reviewsElement.innerText.replace(/\D/g, '')) : 'N/A';
           const shopLink = shopLinkElement ? shopLinkElement.href : 'N/A';
           const image = imageElement ? imageElement.src : 'N/A';
 
           productData.push({
             title,
             price,
-            url: shopLink,
-            image,
-            rating,
-            reviewCount
+            url: shopLinkElement ? shopLinkElement.getAttribute('href') : 'N/A',
+            image
           });
         });
 
@@ -80,13 +145,18 @@ const userAgents = [
       });
 
       if (products.length > 0) {
-        console.log(`Found product: ${products[0].title}`);
-        parsedComponents.push(products[0]);  // Add only the first product
+        const bestMatchProduct = findBestMatch(componentName, products);
+        if (!componentExists(existingComponents, bestMatchProduct)) {
+          console.log(`Found new product: ${bestMatchProduct.title}`);
+          parsedComponents.push(bestMatchProduct);
+        } else {
+          console.log(`Product already exists: ${bestMatchProduct.title}`);
+        }
       }
 
       await page.close();
       console.log('Closing page and waiting before next request...');
-      await sleep(5000);  // Add a delay between requests to avoid being banned
+      await sleep(1000);  // Add a delay between requests to avoid being banned
 
     } catch (error) {
       console.error(`Error processing ${componentName}:`, error);
@@ -96,6 +166,9 @@ const userAgents = [
   await browser.close();
   console.log('Browser closed.');
 
-  fs.writeFileSync('parsedComponents.json', JSON.stringify({ components: parsedComponents }, null, 2));
+  // Append new components to existing components
+  const updatedComponents = existingComponents.concat(parsedComponents);
+  saveData('parsedComponents.json', { components: updatedComponents });
+
   console.log('Parsing completed. Data saved to parsedComponents.json');
 })();

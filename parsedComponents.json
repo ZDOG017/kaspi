@@ -1,68 +1,304 @@
 {
   "components": [
     {
-      "title": "AMD Ryzen 5 3600 OEM",
-      "price": "37820",
-      "url": "https://kaspi.kz/shop/p/amd-ryzen-5-3600-oem-6400344/?c=750000000",
-      "image": "https://resources.cdn-kaspi.kz/img/m/p/hbf/h89/63840261079070.jpg?format=preview-large",
-      "rating": 4.9,
-      "reviewCount": 99
+      "title": "NVIDIA GeForce RTX 4090 24 Гб",
+      "price": "2140496",
+      "url": "https://kaspi.kz/shop/p/nvidia-geforce-rtx-4090-24-gb-112551502/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h8c/hc9/82828264144926.jpg?format=preview-large"
     },
     {
-      "title": "GIGABYTE GeForce GTX 1660 Super OC GV-N166SOC-6GD 6Gb",
-      "price": "105999",
-      "url": "https://kaspi.kz/shop/p/gigabyte-geforce-gtx-1660-super-oc-gv-n166soc-6gd-6gb-100007697/?c=750000000",
-      "image": "https://resources.cdn-kaspi.kz/img/m/p/h09/he3/63838865621022.jpg?format=preview-large",
-      "rating": 4.8,
-      "reviewCount": 45
+      "title": "MSI GeForce RTX 4080 SUPER VENTUS 3X OC 16 Гб",
+      "price": "681370",
+      "url": "https://kaspi.kz/shop/p/msi-geforce-rtx-4080-super-ventus-3x-oc-16-gb-118040843/?c=750000000",
+      "image": ""
     },
     {
-      "title": "ASUS PRIME B450M-K II",
-      "price": "41263",
-      "url": "https://kaspi.kz/shop/p/asus-prime-b450m-k-ii-101069325/?c=750000000",
-      "image": "https://resources.cdn-kaspi.kz/img/m/p/hc0/h89/64022767075358.jpg?format=preview-large",
-      "rating": 5,
-      "reviewCount": 1
+      "title": "Colorful Colorful GeForce RTX 4070 Ti 12 ГБ",
+      "price": "609990",
+      "url": "https://kaspi.kz/shop/p/colorful-colorful-geforce-rtx-4070-ti-12-gb-110031679/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h25/h7a/80395587911710.jpg?format=preview-large"
     },
     {
-      "title": "Corsair Vengeance LPX CMK16GX4M2D3600C18 2x8GB",
-      "price": "24393",
-      "url": "https://kaspi.kz/shop/p/corsair-vengeance-lpx-cmk16gx4m2d3600c18-2x8gb-102510024/?c=750000000",
-      "image": "https://resources.cdn-kaspi.kz/img/m/p/h95/h8e/64356750884894.jpg?format=preview-large",
-      "rating": 5,
-      "reviewCount": 2
+      "title": "ASUS Dual GeForce RTX 4070 OC 12 Гб",
+      "price": "327100",
+      "url": "https://kaspi.kz/shop/p/asus-dual-geforce-rtx-4070-oc-12-gb-110679659/?c=750000000",
+      "image": ""
     },
     {
-      "title": "EVGA 700 W1 100-W1-0700-K2 700W",
-      "price": "60000",
-      "url": "https://kaspi.kz/shop/p/evga-700-w1-100-w1-0700-k2-700w-100360580/?c=750000000",
-      "image": "https://resources.cdn-kaspi.kz/img/m/p/h7d/h33/63895364337694.jpg?format=preview-large",
-      "rating": 5,
-      "reviewCount": 1
+      "title": "Palit GeForce RTX 4060 DUAL 8GB",
+      "price": "174990",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-rtx-4060-dual-8gb-111976843/?c=750000000",
+      "image": ""
     },
     {
-      "title": "Cooler Master Hyper 212 RR-2V2L-18PD-R1",
-      "price": "10431",
-      "url": "https://kaspi.kz/shop/p/cooler-master-hyper-212-rr-2v2l-18pd-r1-107238165/?c=750000000",
-      "image": "https://resources.cdn-kaspi.kz/img/m/p/h36/hd3/64657543561246.jpg?format=preview-large",
-      "rating": 5,
-      "reviewCount": 1
+      "title": "Palit GeForce RTX 4060 DUAL 8GB",
+      "price": "174990",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-rtx-4060-dual-8gb-111976843/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h2e/h30/82307192684574.png?format=preview-large"
     },
     {
-      "title": "W.P.E NF-4000",
-      "price": "3677",
-      "url": "https://kaspi.kz/shop/p/w-p-e-nf-4000-104718879/?c=750000000",
-      "image": "https://resources.cdn-kaspi.kz/img/m/p/he9/h8a/82778789216286.png?format=preview-large",
-      "rating": 4.9,
-      "reviewCount": 54
+      "title": "Palit GeForce RTX 3060 Ti DUAL 8 ГБ",
+      "price": "199990",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-rtx-3060-ti-dual-8-gb-102670980/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h89/h26/64351422808094.jpg?format=preview-large"
     },
     {
-      "title": "NZXT CA-H510i-BR черный",
-      "price": "100000",
-      "url": "https://kaspi.kz/shop/p/nzxt-ca-h510i-br-chernyi-105319210/?c=750000000",
-      "image": "https://resources.cdn-kaspi.kz/img/m/p/hac/hfc/65096281653278.jpg?format=preview-large",
-      "rating": 5,
-      "reviewCount": 1
+      "title": "Manli NVIDIA GeForce RTX 3080 10GB",
+      "price": "1149990",
+      "url": "https://kaspi.kz/shop/p/manli-nvidia-geforce-rtx-3080-10gb-101418880/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "PNY GeForce RTX 3080 Ti XLR8 Gaming 12 ГБ",
+      "price": "550000",
+      "url": "https://kaspi.kz/shop/p/pny-geforce-rtx-3080-ti-xlr8-gaming-12-gb-103527550/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/he7/h53/64844941557790.jpg?format=preview-large"
+    },
+    {
+      "title": "Manli NVIDIA GeForce RTX 3080 10GB",
+      "price": "1149990",
+      "url": "https://kaspi.kz/shop/p/manli-nvidia-geforce-rtx-3080-10gb-101418880/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h03/h3c/64241758535710.jpg?format=preview-large"
+    },
+    {
+      "title": "Palit GeForce RTX 3070 Ti GamingPro 8 ГБ",
+      "price": "225000",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-rtx-3070-ti-gamingpro-8-gb-101648509/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hd0/h8e/63827788070942.jpg?format=preview-large"
+    },
+    {
+      "title": "Palit GeForce RTX 3070 GameRock 8Gb",
+      "price": "369050",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-rtx-3070-gamerock-8gb-100959334/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Palit GeForce RTX 3060 Ti DUAL 8 ГБ",
+      "price": "199990",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-rtx-3060-ti-dual-8-gb-102670980/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h89/h26/64351422808094.jpg?format=preview-large"
+    },
+    {
+      "title": "GIGABYTE GeForce RTX 3060 VISION OC 12GB",
+      "price": "399990",
+      "url": "https://kaspi.kz/shop/p/gigabyte-geforce-rtx-3060-vision-oc-12gb-101115185/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "MSI GeForce RTX 3050 AERO ITX OC 8 ГБ",
+      "price": "165544",
+      "url": "https://kaspi.kz/shop/p/msi-geforce-rtx-3050-aero-itx-oc-8-gb-106509444/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "MSI Radeon RX 7900 XTX GAMING TRIO CLASSIC 24 Гб",
+      "price": "699990",
+      "url": "https://kaspi.kz/shop/p/msi-radeon-rx-7900-xtx-gaming-trio-classic-24-gb-111923712/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "ASUS TUF Gaming Radeon RX 7900 XT OC 20 ГБ",
+      "price": "559450",
+      "url": "https://kaspi.kz/shop/p/asus-tuf-gaming-radeon-rx-7900-xt-oc-20-gb-110217510/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "PowerColor AMD Radeon RX 7800 XT Fighter 16 Гб",
+      "price": "400000",
+      "url": "https://kaspi.kz/shop/p/powercolor-amd-radeon-rx-7800-xt-fighter-16-gb-117937201/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h71/ha4/85586484953118.jpg?format=preview-large"
+    },
+    {
+      "title": "PowerColor AMD Radeon RX 7700 XT Fighter 12 Гб",
+      "price": "281434",
+      "url": "https://kaspi.kz/shop/p/powercolor-amd-radeon-rx-7700-xt-fighter-12-gb-117937207/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hce/hb6/85586667765790.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock Radeon RX 7600 Steel Legend 8 Гб",
+      "price": "184220",
+      "url": "https://kaspi.kz/shop/p/asrock-radeon-rx-7600-steel-legend-8-gb-113508736/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hf5/h6a/83998546100254.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock AMD Radeon RX 6900 XT OC Formula 16 ГБ",
+      "price": "1101100",
+      "url": "https://kaspi.kz/shop/p/asrock-amd-radeon-rx-6900-xt-oc-formula-16-gb-105518730/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb9/h13/64537425182750.jpg?format=preview-large"
+    },
+    {
+      "title": "ASRock AMD Radeon RX 6900 XT OC Formula 16 ГБ",
+      "price": "1101100",
+      "url": "https://kaspi.kz/shop/p/asrock-amd-radeon-rx-6900-xt-oc-formula-16-gb-105518730/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hb9/h13/64537425182750.jpg?format=preview-large"
+    },
+    {
+      "title": "XFX Speedster SWFT 210 AMD Radeon RX 6600 8 ГБ",
+      "price": "135000",
+      "url": "https://kaspi.kz/shop/p/xfx-speedster-swft-210-amd-radeon-rx-6600-8-gb-103372235/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h38/h56/64023388782622.jpg?format=preview-large"
+    },
+    {
+      "title": "Sapphire Pulse Radeon RX 6800 XT 16GB",
+      "price": "999990",
+      "url": "https://kaspi.kz/shop/p/sapphire-pulse-radeon-rx-6800-xt-16gb-102417074/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hfe/h25/64070663143454.jpg?format=preview-large"
+    },
+    {
+      "title": "PowerColor AMD Radeon RX 6700 XT 12 ГБ",
+      "price": "380000",
+      "url": "https://kaspi.kz/shop/p/powercolor-amd-radeon-rx-6700-xt-12-gb-104464299/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/he0/hee/64265378824222.jpg?format=preview-large"
+    },
+    {
+      "title": "HP Pavilion Gaming TG01-2087ur 60Q91EA черный",
+      "price": "870870",
+      "url": "https://kaspi.kz/shop/p/hp-pavilion-gaming-tg01-2087ur-60q91ea-chernyi-108063161/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h55/h00/66935302160414.jpg?format=preview-large"
+    },
+    {
+      "title": "XFX Speedster SWFT 210 AMD Radeon RX 6600 8 ГБ",
+      "price": "135000",
+      "url": "https://kaspi.kz/shop/p/xfx-speedster-swft-210-amd-radeon-rx-6600-8-gb-103372235/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h38/h56/64023388782622.jpg?format=preview-large"
+    },
+    {
+      "title": "Sapphire Pulse Radeon RX 6500 XT 4 ГБ",
+      "price": "144920",
+      "url": "https://kaspi.kz/shop/p/sapphire-pulse-radeon-rx-6500-xt-4-gb-104059757/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h55/he0/63948761825310.jpg?format=preview-large"
+    },
+    {
+      "title": "Palit GeForce GTX 1660Ti Dual 6 ГБ",
+      "price": "135000",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-gtx-1660ti-dual-6-gb-6701183/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hcf/h8b/63841162002462.jpg?format=preview-large"
+    },
+    {
+      "title": "Inno3D GeForce GTX 1660 Super 6GB",
+      "price": "162990",
+      "url": "https://kaspi.kz/shop/p/inno3d-geforce-gtx-1660-super-6gb-101457141/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Inno3D GeForce GTX 1660 Super 6GB",
+      "price": "162990",
+      "url": "https://kaspi.kz/shop/p/inno3d-geforce-gtx-1660-super-6gb-101457141/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "Palit GeForce GTX 1660 Super GP 6 ГБ",
+      "price": "104999",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-gtx-1660-super-gp-6-gb-100017856/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h88/h29/63822602043422.jpg?format=preview-large"
+    },
+    {
+      "title": "Palit GeForce GTX 1650 GP OC 4GB",
+      "price": "140000",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-gtx-1650-gp-oc-4gb-101379681/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "FXN GeForce GTX 1050 Ti 4 ГБ",
+      "price": "119000",
+      "url": "https://kaspi.kz/shop/p/fxn-geforce-gtx-1050-ti-4-gb-103456785/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h04/hbf/64176044179486.jpg?format=preview-large"
+    },
+    {
+      "title": "Geil GeForce GTX 1050 2 ГБ",
+      "price": "80000",
+      "url": "https://kaspi.kz/shop/p/geil-geforce-gtx-1050-2-gb-106092695/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h27/ha7/64719669887006.jpg?format=preview-large"
+    },
+    {
+      "title": "PELADN Radeon RX 580 8 ГБ",
+      "price": "52500",
+      "url": "https://kaspi.kz/shop/p/peladn-radeon-rx-580-8-gb-110566490/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h28/h04/80944978755614.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Radeon R5SL240G 240GB",
+      "price": "8311",
+      "url": "https://kaspi.kz/shop/p/amd-radeon-r5sl240g-240gb-102038191/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h60/hb2/64152676991006.jpg?format=preview-large"
+    },
+    {
+      "title": "ASUS Dual Radeon RX 560 DUAL-RX560-4G 4 ГБ",
+      "price": "77035",
+      "url": "https://kaspi.kz/shop/p/asus-dual-radeon-rx-560-dual-rx560-4g-4-gb-108466042/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h3b/he5/67943455686686.jpg?format=preview-large"
+    },
+    {
+      "title": "Biostar Radeon RX550 VA5515RF41 4Gb",
+      "price": "50000",
+      "url": "https://kaspi.kz/shop/p/biostar-radeon-rx550-va5515rf41-4gb-100490886/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h3f/h28/64006834389022.jpg?format=preview-large"
+    },
+    {
+      "title": "FXN GeForce GTX 1050 Ti 4 ГБ",
+      "price": "119000",
+      "url": "https://kaspi.kz/shop/p/fxn-geforce-gtx-1050-ti-4-gb-103456785/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h04/hbf/64176044179486.jpg?format=preview-large"
+    },
+    {
+      "title": "FXN GeForce GTX 1050 Ti 4 ГБ",
+      "price": "119000",
+      "url": "https://kaspi.kz/shop/p/fxn-geforce-gtx-1050-ti-4-gb-103456785/?c=750000000",
+      "image": ""
+    },
+    {
+      "title": "FXN GeForce GTX 1050 Ti 4 ГБ",
+      "price": "119000",
+      "url": "https://kaspi.kz/shop/p/fxn-geforce-gtx-1050-ti-4-gb-103456785/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h04/hbf/64176044179486.jpg?format=preview-large"
+    },
+    {
+      "title": "Geil GeForce GTX 1050 2 ГБ",
+      "price": "80000",
+      "url": "https://kaspi.kz/shop/p/geil-geforce-gtx-1050-2-gb-106092695/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h27/ha7/64719669887006.jpg?format=preview-large"
+    },
+    {
+      "title": "Inno3D GeForce GTX 1660 Super 6GB",
+      "price": "162990",
+      "url": "https://kaspi.kz/shop/p/inno3d-geforce-gtx-1660-super-6gb-101457141/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h6d/h74/64106402086942.jpg?format=gallery-large"
+    },
+    {
+      "title": "Palit GeForce GTX 1660 Super GP 6 ГБ",
+      "price": "104999",
+      "url": "https://kaspi.kz/shop/p/palit-geforce-gtx-1660-super-gp-6-gb-100017856/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h88/h29/63822602043422.jpg?format=preview-large"
+    },
+    {
+      "title": "FXN GeForce GTX 1050 Ti 4 ГБ",
+      "price": "119000",
+      "url": "https://kaspi.kz/shop/p/fxn-geforce-gtx-1050-ti-4-gb-103456785/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h04/hbf/64176044179486.jpg?format=gallery-large"
+    },
+    {
+      "title": "Artec Hulkbuster 480 черный",
+      "price": "461940",
+      "url": "https://kaspi.kz/shop/p/artec-hulkbuster-480-chernyi-116181572/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/hc5/h66/85003195514910.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Radeon R5SL240G 240GB",
+      "price": "8311",
+      "url": "https://kaspi.kz/shop/p/amd-radeon-r5sl240g-240gb-102038191/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h60/hb2/64152676991006.jpg?format=preview-large"
+    },
+    {
+      "title": "AMD Radeon R5SL240G 240GB",
+      "price": "8311",
+      "url": "https://kaspi.kz/shop/p/amd-radeon-r5sl240g-240gb-102038191/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h60/hb2/64152676991006.jpg?format=preview-large"
+    },
+    {
+      "title": "PNY Quadro RTX 4000 VCQRTX4000-PB 8Gb",
+      "price": "600000",
+      "url": "https://kaspi.kz/shop/p/pny-quadro-rtx-4000-vcqrtx4000-pb-8gb-102907711/?c=750000000",
+      "image": "https://resources.cdn-kaspi.kz/img/m/p/h25/h0e/64197435260958.jpg?format=preview-large"
     }
   ]
 }
